@@ -1,3 +1,4 @@
+import functools
 # If you want to get fancy and allow data to be a callable (like a lambda or factory), you can do:
 
 def dummy_data(data_or_callable, *, verbose=False):
