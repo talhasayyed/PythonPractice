@@ -54,3 +54,13 @@ try:
     generic_payment = PaymentMethod()
 except TypeError as e:
     print(f"\nError: {e}")
+
+# ----------------- Output ----------------------------
+"""
+Processing payment...
+Authorizing and processing credit card payment of $100.
+Processing payment...
+Logging into PayPal and processing payment of $50.
+
+Error: Can't instantiate abstract class PaymentMethod with abstract method process_payment
+"""
