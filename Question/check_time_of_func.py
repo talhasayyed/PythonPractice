@@ -1,20 +1,18 @@
-from typing import Callable 
 import time
 
-from febonacci_optimised import febonacci
-from febonacci_recursion import fibonacci_recursive
+# create a decorator for time measurement
+def time_measurement(func):
+    def wrapper(*args, **kwargs):
+        start_time = time.perf_counter()
+        result = func(*args, **kwargs)
+        end_time = time.perf_counter()
+        print(f"Execution time of {func.__name__}: {end_time - start_time:.6f} seconds")
+        return result
+    return wrapper
 
-def time_function(func: Callable [[int], int], n: int) -> None:
-    start_time: float = time.perf_counter()
-    result: int = func(n)
-    end_time: float = time.perf_counter()
-    # Print information
-    print(f'{func.___name__}({n})={result}')
-    print(f'Total time: {end_time - start_time:.4f}s')
+@time_measurement
+def test():
+    time.sleep(3)
 
-
-# print febonacci_recursive time
-print(time_function(func: febonacci_recursive, n:10))
-
-# print febonacci optimised time
-print(time_function(func: febonacci, n:10))
+if __name__=='__main__':
+    test()
