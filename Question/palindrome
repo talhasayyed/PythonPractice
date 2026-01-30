@@ -1,0 +1,8 @@
+# palindrome is when reverse of string is same
+
+s = "malayalam" 
+
+if s == s[::-1]:
+    print("Yes")
+else:
+    print("No")
