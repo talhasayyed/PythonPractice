@@ -54,6 +54,27 @@ c.home()
 
 
 # 4️⃣ Hierarchical Inheritance
+## Multiple child classes inherit from one parent class.
+"""
+class Animal:
+    def eat(self):
+        print("Eating")
+
+class Dog(Animal):
+    pass
+
+class Cat(Animal):
+    pass
+
+d = Dog()
+c = Cat()
+
+d.eat()
+c.eat()
+"""
+
+
+# Hybrid Inheritance
 ## Combination of two or more types of inheritance.
 """
 class A:
@@ -72,6 +93,7 @@ class D(B, C):
 d = D()
 d.methodA()
 """
+
 
 # ✅ Summary
 # | Type         | Meaning                      |
