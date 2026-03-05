@@ -74,7 +74,7 @@ c.eat()
 """
 
 
-# Hybrid Inheritance
+# 5️⃣ Hybrid Inheritance
 ## Combination of two or more types of inheritance.
 """
 class A:
